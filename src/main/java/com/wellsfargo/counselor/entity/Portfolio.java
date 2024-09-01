@@ -28,6 +28,12 @@ public class Portfolio {
   @Column(nullable = false)
   private LocalDate creationDate;
 
+  protected Portfolio(){}
+
+  public Portfolio(LocalDate creationDate){
+    this.creationDate  = creationDate;
+  }
+
   public long getPortfolioId() {
     return portfolioId;
   }
