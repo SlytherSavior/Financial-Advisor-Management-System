@@ -31,3 +31,40 @@ The data model includes the following key entities:
 
 ### Project Structure
 
+### Project Structure
+
+- .git
+- .nvm
+- .gitignore
+- pom.xml
+- src
+  - main
+    - java
+      - com
+        - slyther
+          - practice            
+            - entities
+              - FinancialAdvisor.java
+              - Client.java
+              - Portfolio.java
+              - Security.java
+            - entrypoint.java
+- target
+
+## Future Enhancements
+
+- **Frontend Integration:** Add a React-based frontend to provide a user-friendly interface for managing financial advisors, clients, portfolios, and securities.
+- **Authentication & Authorization:** Implement security features to ensure that only authorized financial advisors can access and modify client information.
+- **Performance Optimization:** Explore caching strategies and database indexing to improve the performance and scalability of the system.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+
+## Acknowledgments
+
+This project was developed as part of the Wells Fargo SWE simulation on Forage. Special thanks to Wells Fargo and Forage for providing this learning opportunity.
+
+## Contact
+
+For any inquiries or contributions, please contact me via [LinkedIn](www.linkedin.com/in/slyther) or [email](mailto:shrijan5414@gmail.com) or [X/Twitter](https://x.com/SlytherShrijan).
