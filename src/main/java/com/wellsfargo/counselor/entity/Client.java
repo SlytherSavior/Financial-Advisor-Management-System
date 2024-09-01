@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
 import java.util.List;
@@ -36,9 +37,9 @@ public class Client {
     @JoinColumn(name= "advisorId", nullable = false)
     private Advisor advisor; 
   
-    @OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
-    private Portfolio portfolio; 
-  
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    private List<Portfolio> portfolio;
+    
     protected Client(){}
 
     public Client(String firstName, String lastName , String email, String phoneNumber, String address, Advisor advisor) {
@@ -102,17 +103,21 @@ public class Client {
     this.advisor = advisor;
   }
 
-  public void setPortfolio(Portfolio portfolio) {
-    this.portfolio = portfolio;
+
+
+  public List<Portfolio> getPortfolio() {
+    return portfolio;
   }
 
   public Advisor getAdvisor() {
     return advisor;
   }
 
-  public Portfolio getPortfolio() {
-    return portfolio;
+  public void setPortfolio(List<Portfolio> portfolio) {
+    this.portfolio = portfolio;
   }
+
+  
 
   
 
