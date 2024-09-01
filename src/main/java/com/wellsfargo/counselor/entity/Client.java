@@ -28,9 +28,27 @@ public class Client {
   
   @Column(nullable = false)
   private String phone;
-
+  
   @Column(nullable = false)
   private String email;
+  
+    @ManyToOne
+    @JoinColumn(name= "advisorId", nullable = false)
+    private Advisor advisor; 
+  
+    @OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
+    private Portfolio portfolio; 
+  
+    protected Client(){}
+
+    public Client(String firstName, String lastName , String email, String phoneNumber, String address, Advisor advisor) {
+      this.firstName = firstName;
+      this.lastName = lastName ; 
+      this.email = email;
+      this.phone = phoneNumber;
+      this.address = address;
+      this.advisor = advisor;
+  }
 
   public Long getClientId() {
     return clientId;
@@ -95,15 +113,6 @@ public class Client {
   public Portfolio getPortfolio() {
     return portfolio;
   }
-
-  @ManyToOne
-  @JoinColumn(name= "advisorId", nullable = false)
-  private Advisor advisor; 
-
-  @OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
-  private Portfolio portfolio; 
-
-  protected Client(){}
 
   
 
