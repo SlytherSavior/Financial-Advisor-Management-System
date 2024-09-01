@@ -27,7 +27,7 @@ The data model includes the following key entities:
 - **Portfolio**: Contains one or more securities belonging to a client.
 - **Security**: Represents a financial asset within a client's portfolio.
 
-![ERD](./FINAL%20ERD.jpg)
+![ERD](./FINAL%20ERD%20.jpg)
 
 ### Project Structure
 
