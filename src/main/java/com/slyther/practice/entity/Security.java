@@ -1,4 +1,4 @@
-package com.wellsfargo.counselor.entity;
+package com.slyther.practice.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
